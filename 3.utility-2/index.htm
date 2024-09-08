@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Belajar TailwindCss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily:{
+                inter:['Inter']
+            },
+            colors:{
+                azqi:'#bada55',
+                kopi:'#c8ffee',
+            }
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      /* * {
+        border: 1px solid red;
+      } */
+       h2{
+        text-align: center;
+        font-weight: 500;
+        margin-top: 100px;
+       }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-200 bg-clip-text text-transparent">TailwindCSS</span> !</h1>
+
+<h2>Background Fixed (parallax)</h2>
+<div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed"  style="background-image: url('img/wallpaper\ \(48\).jpg')">
+  <p class="p-5 text-2xl ">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium quos itaque nostrum ut ducimus impedit excepturi, ullam doloremque blanditiis adipisci molestiae ipsam minus nam voluptate recusandae fugiat nihil provident.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, enim odio numquam natus doloribus nulla voluptates ullam quibusdam quaerat consequuntur exercitationem facere magni similique delectus consectetur? Impedit qui possimus hic.
+    Lorem ipsum dolor sit, amet consectetur 
+  </p>
+</div> 
+
+<h2>Background Local (Gambar Ikut)</h2>
+<div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-local"  style="background-image: url('img/wallpaper\ \(48\).jpg')">
+  <p class="p-5 text-2xl ">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium quos itaque nostrum ut ducimus impedit excepturi, ullam doloremque blanditiis adipisci molestiae ipsam minus nam voluptate recusandae fugiat nihil provident.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, enim odio numquam natus doloribus nulla voluptates ullam quibusdam quaerat consequuntur exercitationem facere magni similique delectus consectetur? Impedit qui possimus hic.
+    Lorem ipsum dolor sit, amet consectetur 
+  </p>
+</div> 
+
+<h2>Background scroll (Scroll)</h2>
+<div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-scroll"  style="background-image: url('img/wallpaper\ \(48\).jpg')">
+  <p class="p-5 text-2xl ">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium quos itaque nostrum ut ducimus impedit excepturi, ullam doloremque blanditiis adipisci molestiae ipsam minus nam voluptate recusandae fugiat nihil provident.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, enim odio numquam natus doloribus nulla voluptates ullam quibusdam quaerat consequuntur exercitationem facere magni similique delectus consectetur? Impedit qui possimus hic.
+    Lorem ipsum dolor sit, amet consectetur 
+  </p>
+</div> 
+
+<h2>Background Auto</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-auto" style="background-image: url(img/wallpaper\ \(01\).webp);">
+</div>
+
+<h2>Background Cover</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-cover" style="background-image: url(img/wallpaper\ \(01\).webp);">
+</div>
+
+<h2>Background Contain (jika ada kosong akan dirapid (diulang))</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain" style="background-image: url(img/wallpaper\ \(01\).webp);">
+</div>
+
+<h2>Background Contain (no-repeat)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat" style="background-image: url(img/wallpaper\ \(01\).webp);">
+</div>
+
+<h2>Background Position (bg-bottom)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-bottom" style="background-image: url(img/wallpaper\ \(21\).jpg);">
+</div>
+
+<h2>Background Position (bg-top)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-top" style="background-image: url(img/wallpaper\ \(21\).jpg);">
+</div>
+
+<h2>Background Position (bg-center)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center" style="background-image: url(img/wallpaper\ \(21\).jpg);">
+</div>
+
+<h2>Text Background (bg-center)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center" style="background-image: url(img/wallpaper\ \(21\).jpg);">
+  <h1 style="background-image: url(img/wallpaper\ \(21\).jpg);" 
+  class="text-8xl bg-clip-text text-transparent shadow-2xl hover:shadow-black">Hai Saya Azqi</h1>
+</div>
+
+<h2>Background Rounder (2xl)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Background Rounder (full)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-full" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Background Rounder (rounded-bottom-2xl)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-b-2xl" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Background Rounder (rounded-top-2xl)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-t-2xl" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Background Rounder (rounded-right-2xl)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-r-2xl" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Baorder (border-8)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl border-8 border-gray-600" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Shadow (shadow-xl & shadow-slate)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-400" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Opacity (mix-blend-multiply)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+  <div class="w-full h-full bg-blue-300 overflow-hidden border-8 mix-blend-multiply"></div>
+</div>
+
+<h2>Opacity (mix-blend-darken)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+  <div class="w-full h-full bg-blue-300 overflow-hidden border-8 mix-blend-darken"></div>
+</div>
+
+<h2>Opacity (mix-blend-overlay)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+  <div class="w-full h-full bg-blue-300 overflow-hidden border-8 mix-blend-overlay"></div>
+</div>
+
+<h2>Opacity (mix-blend-screen)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+  <div class="w-full h-full bg-blue-300 overflow-hidden border-8 mix-blend-screen"></div>
+</div>
+
+<h2>Opacity (bg image blend dengan bg color(multiply))</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 bg-blend-multiply" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Opacity (bg image blend dengan bg color(overlay))</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-red-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 bg-blend-overlay" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Blur (Blur-sm hover:blur-none)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 blur-sm hover:blur-none" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Brightness (brightness-110)</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 brightness-110" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+</div>
+
+<h2>Combine (backdrop-blur-md rounder-full bg-white/30->(opacity dapat diatur jika ditambahkan /))</h2>
+<div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 flex" style="background-image: url(img/wallpaper\ \(37\).jpg);">
+  <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full hover:backdrop-blur-none"></div>
+</div>
+
+<div class="mb-96"></div>
+
+    </body>
+
+</html>

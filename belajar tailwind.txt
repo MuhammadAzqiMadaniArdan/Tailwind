@@ -1,0 +1,26 @@
+Ngulik tailwind
+
+1.Instalasi Tailwind
+a.npm init -y
+b.npm i tailwindcss
+c.npx tailwindcss init
+
+2.script
+->dev : "tailwindcss -i ./tailwind.css -o ./style.css --watch"
+
+tailwind.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+---
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./index.html'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+

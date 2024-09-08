@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Belajar TailwindCss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily:{
+                inter:['Inter']
+            },
+            colors:{
+                azqi:'#bada55',
+                kopi:'#c8ffee',
+            }
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      /* * {
+        border: 1px solid red;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-200 bg-clip-text text-transparent">TailwindCSS</span> !</h1>
+
+    <section class="mb-10 bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-500">
+      <h2 class="text-3xl text-center">Spacing</h2>
+      <div class="py-8">Padding</div>
+    </section>
+
+    <div class="m-13 bg-kopi">Margin</div>
+
+    <section class="mb-10 w-1/2 bg-green-200">
+      <h2 class="text-center">Sizing</h2>
+      <div class="w-1/2">Kotak 1</div>
+    </section>
+
+<section class="mb-10 bg-green-500">
+  <h2 class="text-center">Sizing</h2>
+  <div class="w-32 h-32">Kotak 1</div>
+  <div class="max-w-xs min-h-screen bg-azqi">Kotak 2</div>
+</section>
+
+<section class="mb-96 font-inter max-w-3xl mx-auto">
+    <h2 class="mb-2 text-4xl font-bold">Belajar mengenai Typograpy pada tailwind css</h2>
+    <div class="mb-4 text-gray-500">By <a href="#" class="text-gray-800 font-semibold">
+        Muhammad Azqi
+    </a>,1 Januari 2024</div>
+    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione possimus  minima in dolore illum?</p>
+    <blockquote class="mb-4 italic font-thin text-xl">Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold text-blue-600">
+        consectetur
+    </a> adipisicing elit. Ratione possimus molestias dolorum harum? totam iure mollitia, at minima in dolore illum?</blockquote>  
+    <p class="mb-4 bg-azqi">Lorem ipsum dolor sit amet animi, repudiandae voluptates, hic fugiat totam iure mollitia, at minima in dolore illum?</p>
+</section>
+
+    </body>
+</html>
